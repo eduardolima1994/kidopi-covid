@@ -13,7 +13,7 @@
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $country = $_POST['country'];
     } else {
-      $country = 'Australia';
+      $country = 'Brasil';
     }
      
     $url = 'https://dev.kidopilabs.com.br/exercicio/covid.php?pais=';
@@ -30,6 +30,8 @@
       $totalDead = $totalDead + $data->{$counter}->Mortos;
       $totalConfirmed = $totalConfirmed + $data->{$counter}->Confirmados;
     };
+
+    require './db/db.php';
 
   ?>
 
