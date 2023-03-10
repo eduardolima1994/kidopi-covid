@@ -363,7 +363,10 @@ body.open-menu .container::after {
 }
 
 .section1 {
+  padding: 8px;
+  height: auto;
   background-color: #25283D;
+  display: inline-block;
 }
 
 .section2 {
