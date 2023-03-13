@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kinopi - Covid-19</title>
+  <title>Kidopi - Painel Covid-19</title>
 </head>
 <body>
 
@@ -13,9 +13,9 @@
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $country = $_POST['country'];
     } else {
-      $country = 'Brasil';
+      $country = 'Canada';
     }
-     
+
     $url = 'https://dev.kidopilabs.com.br/exercicio/covid.php?pais=';
     $completeUrl = $url . $country;
     $json = file_get_contents($completeUrl);
@@ -31,7 +31,7 @@
       $totalConfirmed = $totalConfirmed + $data->{$counter}->Confirmados;
     };
 
-    require './db/db.php';
+    require './db/insert.php';
 
   ?>
 
