@@ -252,7 +252,9 @@
   <h1>Section 2</h1>
 </section>
 <section class="section section3">
-  <h1>Section 3</h1>
+  <?php
+    require './db/select.php';
+  ?>
 </section>
 
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
