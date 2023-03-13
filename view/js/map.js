@@ -236,7 +236,7 @@ const CONTINENT_MARKERS = [
   percentage: 33.5 
 },
 {
-  key: 4,
+  key: 3,
   latLng: [-25, 135],
   name: 'Austrália',
   countries: ['AU'],
@@ -318,6 +318,13 @@ function onMarkerClick() {
     key = parseInt(key, 10);
     const obj = _.find(CONTINENT_MARKERS, ['key', key]);
     selectMarkerOnGraph(obj);
+    if (obj.key === 1) {
+      console.log(`O meu valor é ${obj.key}`);
+    } else if (obj.key === 2) {
+      console.log(`O meu valor é ${obj.key}`);
+    } else if (obj.key === 3) {
+      console.log(`O meu valor é ${obj.key}`);
+    }
   });
 }
 

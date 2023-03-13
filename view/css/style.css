@@ -375,6 +375,9 @@ body.open-menu .container::after {
 
 .section3 {
   background-color: #606473;
+  padding: 8px;
+  height: auto;
+  display: inline-block;
 }
 
 .sticky {
