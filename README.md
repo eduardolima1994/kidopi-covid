@@ -10,11 +10,22 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 
 
 ```
-Em construção
+PHP 8.1.12
+```
+```
+Composer version 2.3.10
 ```
 
 ### 🔧 Instalação
 
+Instale as dependências:
 ```
-Em construção
+composer install
+```
+Crie um arquivo .env na raiz do projeto para configuração do banco de dados:
+```
+DB_HOST=hostName
+DB_NAME=databaseName
+DB_USER=userName
+DB_PASSWORD=password
 ```
