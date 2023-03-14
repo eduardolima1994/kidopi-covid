@@ -41,7 +41,8 @@
       <p><?php echo 'Quantidade de óbitos: ', $totalDead ?></p>
   </session>
 
-  <hr>
+  <br>
+  <br>
 
   <session>
     <?php foreach ($countries as $valor) { ?>
@@ -49,6 +50,7 @@
       <p><?php echo 'Casos confirmados: ', $valor->Confirmados ?></p>
       <p><?php echo 'Óbitos: ', $valor->Mortos ?></p>
       <p><?php echo 'País de referência: ', $valor->Pais ?></p>
+      <br>
     <?php } ?>
   </session>
 
