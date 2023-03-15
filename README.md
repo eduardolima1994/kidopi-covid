@@ -1,5 +1,4 @@
-# App para acesso a dados da Covid-19, usando API da Kidopi.
-
+# App Kidopi Covid-19, acompanhamento de casos
 App construído em PHP, Javascript, HTML5 e CSS3. 
 
 ## 🚀 Começando
