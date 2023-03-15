@@ -10,22 +10,22 @@
 <body>
 
 <header>
-		<div class="container">
-			<div class="menu">
-				<a href="index.php" class="logo">Kidopi - Painel Covid-19</a>
-                <a href="index.php"><img src="src/img/logo.gif" alt="Kidopi - Painel Covid-19" /></a>
-				<ul>
-					<li><a href="index.php">Home</a></li>
-					<li><a href="#">Países</a></li>
-					<li><a href="#">Contato</a></li>
-					<li><a href="#">Sobre</a></li>
-				</ul>
-				<div class="hamburger-menu">
-					<div class="bar"></div>
-				</div>
-			</div>
-		</div>
-	</header>
+    <div class="container">
+        <div class="menu">
+            <a href="index.php" class="logo">Kidopi - Painel Covid-19</a>
+            <a href="index.php"><img src="src/img/logo.gif" alt="Kidopi - Painel Covid-19" /></a>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="#">Países</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+            </div>
+        </div>
+    </div>
+</header>
 
 <section class="section section1">
   
@@ -36,14 +36,13 @@
         array_push($countries, $data->{9}, $data->{24}, $data->{33});
     ?>
 
-    <form id="form-profession" class="sel sel--black-panther" method="POST" action="index.php">
-        <select id="select-profession" name="country" required="required">
+    <form id="form-profession" class="selectdiv" method="POST" action="index.php">
+        <select id="select-profession" name="country" onchange="enviarFormulario()"> 
             <option>Selecione um país</option>
             <?php foreach ($countries as $valor) { ?>
                 <option id="variable" name="variable" value=<?php echo $valor ?>><?php echo $valor ?></option>
             <?php } ?>
         </select>
-        <button type="submit">Enviar</button>
     </form>
 
     <?php
@@ -60,10 +59,14 @@
   ?>
 </section>
 
-<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script>
+  function enviarFormulario() {
+    document.getElementById("form-profession").submit();
+  }
+</script>
+
 <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
 <script src='https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 <script  src="./view/js/nav-bag.js"></script>
 <script  src="./view/js/select.js"></script>
 
