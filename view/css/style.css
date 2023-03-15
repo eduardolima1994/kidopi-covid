@@ -34,7 +34,7 @@ a:active {
 
 header {
   position: relative;
-  background-color: #25283D;
+  background-color: #181D47;
   padding: 8px 0;
   width: 100%;
   height: 57px;
@@ -313,9 +313,9 @@ body.open-menu .container::after {
 }
 
 .section1 {
-  padding: 8px;
+  text-align: center;
   height: auto;
-  background-color: #3e4261;
+  background-color: #5D6494;
   display: inline-block;
 }
 
@@ -324,7 +324,7 @@ body.open-menu .container::after {
 }
 
 .section3 {
-  background-color: #606473;
+  background-color: #181D47;
   padding: 8px;
   height: auto;
   display: inline-block;
@@ -380,10 +380,10 @@ body.open-menu .container::after {
   padding: 0px 24px;
   font-size: 16px;
   line-height: 1.75;
-  color: #25283D;
-  background-color: #9A9BA5;
+  color: #181D47;
+  background-color: #FFF;
   background-image: none;
-  border: 2px solid #25283D;
+  border: 2px solid #181D47;
   -ms-word-break: normal;
   word-break: normal;
 }
