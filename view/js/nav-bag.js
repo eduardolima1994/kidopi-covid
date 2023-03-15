@@ -1,6 +1,5 @@
 const section1 = document.querySelector(".section1");
 const nav = document.querySelector(".nav");
-const navHeight = nav.getBoundingClientRect().height;
 
 const obsCallback = function (entries, observer) {
     const [entry] = entries;
@@ -12,7 +11,7 @@ const obsCallback = function (entries, observer) {
 const obsObject = {
     root: null,
     threshold: 0.1,
-    rootMargin: `-${navHeight}px`,
+    rootMargin: `-10px`,
 };
 
 const headObserver = new IntersectionObserver(obsCallback, obsObject);
