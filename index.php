@@ -50,8 +50,27 @@
     ?>
 
 </section>
+
 <section class="section section2">
-  <h1>Section 2</h1>
+    
+    <?php
+        $json = file_get_contents("https://dev.kidopilabs.com.br/exercicio/covid.php?listar_paises=1");
+        $data = json_decode($json);
+        $countries = array();
+        foreach ($data as $key => $value) {
+            array_push($countries, $value);
+        }
+    ?>
+
+    <form id="form-profession" class="selectdiv" method="POST" action="index.php">
+        <select id="select-profession" name="country" onchange="enviarFormulario()"> 
+            <option>Selecione um país</option>
+            <?php foreach ($countries as $valor) { ?>
+                <option id="variable" name="variable" value=<?php echo $valor ?>><?php echo $valor ?></option>
+            <?php } ?>
+        </select>
+    </form>
+
 </section>
 <section class="section section3">
   <?php
