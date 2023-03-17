@@ -47,7 +47,7 @@
     </form>
 
     <?php
-        include('pages/states.php');
+        include('pages/details.php');
     ?>
 
 </section>
@@ -65,14 +65,14 @@
 
     <form id="form-profession" class="selectdiv" method="POST" action="index.php">
         
-        <select id="select-profession" name="countries"> 
+        <select id="select-profession" name="country1"> 
             <option>Selecione um país</option>
             <?php foreach ($countries as $valor) { ?>
                 <option id="variable" name="variable" value=<?php echo $valor ?>><?php echo $valor ?></option>
             <?php } ?>
         </select>
     
-        <select id="select-profession" name="countries"> 
+        <select id="select-profession" name="country2"> 
             <option>Selecione um país</option>
             <?php foreach ($countries as $valor) { ?>
                 <option id="variable" name="variable" value=<?php echo $valor ?>><?php echo $valor ?></option>
