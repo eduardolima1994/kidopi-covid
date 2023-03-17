@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
     <link rel="stylesheet" href="./view/css/style.css">
+    <link rel="icon" href="src/img/icon.ico">
     <title>Kidopi - Painel Covid-19</title>
 </head>
 <body>
@@ -63,12 +64,23 @@
     ?>
 
     <form id="form-profession" class="selectdiv" method="POST" action="index.php">
-        <select id="select-profession" name="country" onchange="enviarFormulario()"> 
+        
+        <select id="select-profession" name="countries"> 
             <option>Selecione um país</option>
             <?php foreach ($countries as $valor) { ?>
                 <option id="variable" name="variable" value=<?php echo $valor ?>><?php echo $valor ?></option>
             <?php } ?>
         </select>
+    
+        <select id="select-profession" name="countries"> 
+            <option>Selecione um país</option>
+            <?php foreach ($countries as $valor) { ?>
+                <option id="variable" name="variable" value=<?php echo $valor ?>><?php echo $valor ?></option>
+            <?php } ?>
+        </select>
+
+        <button type="submit">Comparar</button>
+
     </form>
 
 </section>
