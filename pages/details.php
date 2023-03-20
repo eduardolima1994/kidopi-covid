@@ -11,11 +11,7 @@
   <?php
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-      if(isset($country)){
-        $country = 'Brazil';
-      } else {
-        $country = $_POST['country'];
-      }
+      $country = $_POST['country'];
     } else {
       $country = 'Brazil';
     }
