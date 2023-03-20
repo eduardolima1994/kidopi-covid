@@ -53,6 +53,8 @@
 </section>
 
 <section class="section section2">
+
+    <h1>Compare países:</h1>
     
     <?php
         $json = file_get_contents("https://dev.kidopilabs.com.br/exercicio/covid.php?listar_paises=1");
@@ -63,7 +65,7 @@
         }
     ?>
 
-    <form id="form-profession" class="selectdiv" method="POST" action="index.php">
+    <form id="form-profession" class="selectdiv" method="POST" action="pages/compareCountries.php">
         
         <select id="select-profession" name="country1"> 
             <option>Selecione um país</option>
