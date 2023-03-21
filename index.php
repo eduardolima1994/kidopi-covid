@@ -13,10 +13,10 @@
 <header>
     <div class="container">
         <div class="menu">
-            <a href="index.php" class="logo">Kidopi - Painel Covid-19</a>
-            <a href="index.php"><img src="src/img/logo.gif" alt="Kidopi - Painel Covid-19" /></a>
+            <a href="./" class="logo">Kidopi - Painel Covid-19</a>
+            <a href="./"><img src="src/img/logo.gif" alt="Kidopi - Painel Covid-19" /></a>
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="./">Home</a></li>
                 <li><a href="#">Países</a></li>
                 <li><a href="#">Contato</a></li>
                 <li><a href="#">Sobre</a></li>
@@ -81,7 +81,7 @@
             <?php } ?>
         </select>
 
-        <button type="submit">Comparar</button>
+        <button type="submit" class="button-compare">Comparar</button>
 
     </form>
 
