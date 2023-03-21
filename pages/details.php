@@ -35,7 +35,6 @@
 
   ?>
 
-
   <session>
     <h3><?php echo $country ?></h3>
       <p><?php echo 'Quantidade de casos: ', $totalConfirmed ?></p>
@@ -43,19 +42,6 @@
   </session>
   <br>
 
-<!--
-
-  <session>
-    <?php foreach ($countries as $valor) { ?>
-      <h3><?php echo 'Estado: ', $valor->ProvinciaEstado ?></h3>
-      <p><?php echo 'Casos confirmados: ', $valor->Confirmados ?></p>
-      <p><?php echo 'Óbitos: ', $valor->Mortos ?></p>
-      <p><?php echo 'País de referência: ', $valor->Pais ?></p>
-      <br>
-    <?php } ?>
-  </session>
-
--->
   <?php
 
     $purchased = array();
@@ -69,8 +55,7 @@
     $dataPoints = array();
     $dataPoints2 = array();
     $numberPurchased = count($purchased);
-     
-    
+         
     for ($counter = 0; $counter < $numberPurchased; $counter++) {
       array_push($dataPoints, array("label"=> $countries[$counter]->ProvinciaEstado, "y"=> $purchased[$counter]));
       array_push($dataPoints2, array("label"=> $countries[$counter]->ProvinciaEstado, "y"=> $sold[$counter]));

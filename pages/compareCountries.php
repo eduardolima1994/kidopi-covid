@@ -10,15 +10,15 @@
 
   <?php
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-      $country1 = $_POST['country1'];
-      $country2 = $_POST['country2'];
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+      $country1 = $_POST["country1"];
+      $country2 = $_POST["country2"];
     } else {
-      $country1 = 'Brazil';
-      $country2 = 'Brazil';
+      $country1 = "Brazil";
+      $country2 = "Brazil";
     }
 
-    $url = 'https://dev.kidopilabs.com.br/exercicio/covid.php?pais=';
+    $url = "https://dev.kidopilabs.com.br/exercicio/covid.php?pais=";
     $completeUrl1 = $url . $country1;
     $completeUrl2 = $url . $country2;
     $json1 = file_get_contents($completeUrl1);
@@ -53,14 +53,14 @@
 
   <session>
     <h3><?php echo $country1 ?></h3>
-      <p><?php echo 'Quantidade de casos: ', $totalConfirmed1 ?></p>
-      <p><?php echo 'Quantidade de óbitos: ', $totalDead1 ?></p>
+      <p><?php echo "Quantidade de casos: ", $totalConfirmed1 ?></p>
+      <p><?php echo "Quantidade de óbitos: ", $totalDead1 ?></p>
   </session>
   
   <session>
     <h3><?php echo $country2 ?></h3>
-      <p><?php echo 'Quantidade de casos: ', $totalConfirmed2 ?></p>
-      <p><?php echo 'Quantidade de óbitos: ', $totalDead2 ?></p>
+      <p><?php echo "Quantidade de casos: ", $totalConfirmed2 ?></p>
+      <p><?php echo "Quantidade de óbitos: ", $totalDead2 ?></p>
   </session>
 
   <h1>Comparativo:</h1>
@@ -68,21 +68,18 @@
   <?php
   
     if($totalConfirmed1 === 0 || $totalConfirmed2 === 0){
-      echo 'Faltam dados!';
+      echo "<p>Faltam dados!</p>";
     } else {
-      echo $country1;
-      echo 'Taxa de morte: ', $totalDead1 / $totalConfirmed1;
-      echo $country2;
-      echo 'Taxa de morte: ', $totalDead2 / $totalConfirmed2;
+      echo "<h3>", $country1, "</h3>";
+      echo "<p><b>Taxa de morte: </b>", $totalDead1 / $totalConfirmed1, "</p>";
+      echo "<h3>", $country2, "</h3>";
+      echo "<p><b>Taxa de morte: </b>", $totalDead2 / $totalConfirmed2, "</p>";
 
-      echo 'Comparativo';
-      echo 'Diferença entre países: ', ($totalDead1 / $totalConfirmed1) - ($totalDead2 / $totalConfirmed2);
+      echo "<h3> Comparativo </h3>";
+      echo "<p><b>Diferença entre países: </b>", ($totalDead1 / $totalConfirmed1) - ($totalDead2 / $totalConfirmed2), "</p>";
     }
 
   ?>
-
-
-
 
   <a href="../">Voltar</a>
 
