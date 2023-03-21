@@ -100,7 +100,7 @@
 
 <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
 <script src='https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js'></script>
-<script  src="./view/js/nav-bar.js"></script>
+<script  src="./view/js/navBar.js"></script>
 <script  src="./view/js/select.js"></script>
 
 </body>
