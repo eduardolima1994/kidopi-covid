@@ -320,7 +320,10 @@ body.open-menu .container::after {
 }
 
 .section2 {
-  background-color: #D6D7D8;
+  text-align: center;
+  height: auto;
+  background-color: #5D6494;
+  display: inline-block;
 }
 
 .section3 {
