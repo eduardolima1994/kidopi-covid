@@ -65,20 +65,22 @@
 
   <h1>Comparativo:</h1>
 
-  <session>
-    <h3><?php echo $country1 ?></h3>
-      <p><?php echo 'Taxa de morte: ', $totalDead1 / $totalConfirmed1 ?></p>
-  </session>
+  <?php
   
-  <session>
-    <h3><?php echo $country2 ?></h3>
-      <p><?php echo 'Taxa de morte: ', $totalDead2 / $totalConfirmed2 ?></p>
-  </session>
+    if($totalConfirmed1 === 0 || $totalConfirmed2 === 0){
+      echo 'Faltam dados!';
+    } else {
+      echo $country1;
+      echo 'Taxa de morte: ', $totalDead1 / $totalConfirmed1;
+      echo $country2;
+      echo 'Taxa de morte: ', $totalDead2 / $totalConfirmed2;
 
-  <session>
-    <h3>Comparativo</h3>
-      <p><?php echo 'Diferença entre países: ', ($totalDead1 / $totalConfirmed1) - ($totalDead2 / $totalConfirmed2) ?></p>
-  </session>
+      echo 'Comparativo';
+      echo 'Diferença entre países: ', ($totalDead1 / $totalConfirmed1) - ($totalDead2 / $totalConfirmed2);
+    }
+
+  ?>
+
 
 
 
