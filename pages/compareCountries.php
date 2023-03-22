@@ -53,14 +53,14 @@
 
   <session>
     <h3><?php echo $country1 ?></h3>
-      <p><?php echo "Quantidade de casos: ", $totalConfirmed1 ?></p>
-      <p><?php echo "Quantidade de óbitos: ", $totalDead1 ?></p>
+      <p><?php echo "Quantidade de casos: ", number_format($totalConfirmed1, 0, ',', '.') ?></p>
+      <p><?php echo "Quantidade de óbitos: ", number_format($totalDead1, 0, ',', '.') ?></p>
   </session>
   
   <session>
     <h3><?php echo $country2 ?></h3>
-      <p><?php echo "Quantidade de casos: ", $totalConfirmed2 ?></p>
-      <p><?php echo "Quantidade de óbitos: ", $totalDead2 ?></p>
+      <p><?php echo "Quantidade de casos: ", number_format($totalConfirmed2, 0, ',', '.') ?></p>
+      <p><?php echo "Quantidade de óbitos: ", number_format($totalDead2, 0, ',', '.') ?></p>
   </session>
 
   <h1>Comparativo:</h1>
@@ -71,12 +71,12 @@
       echo "<p>Faltam dados!</p>";
     } else {
       echo "<h3>", $country1, "</h3>";
-      echo "<p><b>Taxa de morte: </b>", $totalDead1 / $totalConfirmed1, "</p>";
+      echo "<p><b>Taxa de morte: </b>", number_format(($totalDead1 / $totalConfirmed1), 4, ',', '.'), "</p>";
       echo "<h3>", $country2, "</h3>";
-      echo "<p><b>Taxa de morte: </b>", $totalDead2 / $totalConfirmed2, "</p>";
+      echo "<p><b>Taxa de morte: </b>", number_format(($totalDead2 / $totalConfirmed2), 4, ',', '.'), "</p>";
 
       echo "<h3> Comparativo </h3>";
-      echo "<p><b>Diferença entre países: </b>", ($totalDead1 / $totalConfirmed1) - ($totalDead2 / $totalConfirmed2), "</p>";
+      echo "<p><b>Diferença entre países: </b>", number_format((($totalDead1 / $totalConfirmed1) - ($totalDead2 / $totalConfirmed2)), 4, ',', '.'), "</p>";
     }
 
   ?>
