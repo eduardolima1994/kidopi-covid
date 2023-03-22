@@ -22,12 +22,12 @@
     $data = json_decode($json);
     $numberKeys = count(get_object_vars($data));
     $countries = array();
-    $totalDead = 0;
+    $totalDeaths = 0;
     $totalConfirmed = 0;
 
     for ($counter = 0; $counter < $numberKeys; $counter++) {
       array_push($countries, $data->{$counter});
-      $totalDead = $totalDead + $data->{$counter}->Mortos;
+      $totalDeaths = $totalDeaths + $data->{$counter}->Mortos;
       $totalConfirmed = $totalConfirmed + $data->{$counter}->Confirmados;
     };
 
@@ -38,27 +38,27 @@
   <session>
     <h3><?php echo $country ?></h3>
       <p><?php echo 'Quantidade de casos: ', number_format($totalConfirmed, 0, ',', '.') ?></p>
-      <p><?php echo 'Quantidade de óbitos: ', number_format($totalDead, 0, ',', '.') ?></p>
+      <p><?php echo 'Quantidade de óbitos: ', number_format($totalDeaths, 0, ',', '.') ?></p>
   </session>
   <br>
 
   <?php
 
-    $purchased = array();
-    $sold = array();
+    $confirmed = array();
+    $deaths = array();
 
     foreach ($countries as $valor) {
-      array_push($purchased, $valor->Confirmados);
-      array_push($sold, $valor->Mortos);
+      array_push($confirmed, $valor->Confirmados);
+      array_push($deaths, $valor->Mortos);
     }
 
     $dataPoints = array();
     $dataPoints2 = array();
-    $numberPurchased = count($purchased);
+    $numberConfirmed = count($confirmed);
          
-    for ($counter = 0; $counter < $numberPurchased; $counter++) {
-      array_push($dataPoints, array("label"=> $countries[$counter]->ProvinciaEstado, "y"=> $purchased[$counter]));
-      array_push($dataPoints2, array("label"=> $countries[$counter]->ProvinciaEstado, "y"=> $sold[$counter]));
+    for ($counter = 0; $counter < $numberConfirmed; $counter++) {
+      array_push($dataPoints, array("label"=> $countries[$counter]->ProvinciaEstado, "y"=> $confirmed[$counter]));
+      array_push($dataPoints2, array("label"=> $countries[$counter]->ProvinciaEstado, "y"=> $deaths[$counter]));
     };
 
   ?>
