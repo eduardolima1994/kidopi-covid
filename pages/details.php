@@ -37,8 +37,8 @@
 
   <session>
     <h3><?php echo $country ?></h3>
-      <p><?php echo 'Quantidade de casos: ', $totalConfirmed ?></p>
-      <p><?php echo 'Quantidade de óbitos: ', $totalDead ?></p>
+      <p><?php echo 'Quantidade de casos: ', number_format($totalConfirmed, 0, ',', '.') ?></p>
+      <p><?php echo 'Quantidade de óbitos: ', number_format($totalDead, 0, ',', '.') ?></p>
   </session>
   <br>
 
