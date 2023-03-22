@@ -16,7 +16,7 @@
       $country1 = $_POST["country1"];
       $country2 = $_POST["country2"];
       if($country1 === "Selecione um país" || $country2 === "Selecione um país"){
-        echo "<script>alert('Falta ao menos um país. Selecione dois países!'); setTimeout(function(){ window.location.href = '../index.php'; }, 0); </script>";
+        echo "<script>alert('Falta pelo menos um país. Por favor, selecione dois países.'); setTimeout(function(){ window.location.href = '../index.php'; }, 0); </script>";
       }
     } else {
       $country1 = "Brazil";
