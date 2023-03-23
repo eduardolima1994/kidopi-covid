@@ -40,95 +40,14 @@
       <p><?php echo 'Quantidade de casos: ', number_format($totalConfirmed, 0, ',', '.') ?></p>
       <p><?php echo 'Quantidade de óbitos: ', number_format($totalDeaths, 0, ',', '.') ?></p>
   </session>
-  <br>
 
-  <?php
-
-    $confirmed = array();
-    $deaths = array();
-
-    foreach ($countries as $valor) {
-      array_push($confirmed, $valor->Confirmados);
-      array_push($deaths, $valor->Mortos);
-    }
-
-    $dataPoints = array();
-    $dataPoints2 = array();
-    $numberConfirmed = count($confirmed);
-         
-    for ($counter = 0; $counter < $numberConfirmed; $counter++) {
-      array_push($dataPoints, array("label"=> $countries[$counter]->ProvinciaEstado, "y"=> $confirmed[$counter]));
-      array_push($dataPoints2, array("label"=> $countries[$counter]->ProvinciaEstado, "y"=> $deaths[$counter]));
-    };
-
-  ?>
-
-  <div id="chartContainer" style="height: 300px; width: 100%;"></div>
-
-  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-  
-  <script>
-      window.onload = function () {
-          
-          var chart = new CanvasJS.Chart("chartContainer", {
-              animationEnabled: true,
-              title:{
-                  text: "Estados"
-              },    
-              axisY: {
-                  title: "Confirmados",
-                  titleFontColor: "#25283D",
-                  lineColor: "#25283D",
-                  labelFontColor: "#25283D",
-                  tickColor: "#25283D"
-              },
-              axisY2: {
-                  title: "Óbitos",
-                  titleFontColor: "#C0504E",
-                  lineColor: "#C0504E",
-                  labelFontColor: "#C0504E",
-                  tickColor: "#C0504E"
-              },    
-              toolTip: {
-                  shared: true
-              },
-              legend: {
-                  cursor:"pointer",
-                  itemclick: toggleDataSeries
-              },
-              data: [{
-                  type: "column",
-                  name: "Confirmados",
-                  legendText: "Confirmados",
-                  showInLegend: true, 
-                  dataPoints:<?php echo json_encode($dataPoints,
-                          JSON_NUMERIC_CHECK); ?>
-              },
-              {
-                  type: "column",    
-                  name: "Óbitos",
-                  legendText: "Óbitos",
-                  axisYType: "secondary",
-                  showInLegend: true,
-                  dataPoints:<?php echo json_encode($dataPoints2,
-                          JSON_NUMERIC_CHECK); ?>
-              }]
-          });
-          chart.render();
-              
-          function toggleDataSeries(e) {
-              if (typeof(e.dataSeries.visible) === "undefined"
-                          || e.dataSeries.visible) {
-                  e.dataSeries.visible = false;
-              }
-              else {
-                  e.dataSeries.visible = true;
-              }
-              chart.render();
-          }
-          
-      }
-  </script>
+  <session>
+    <?php foreach ($countries as $valor) { ?>
+      <h5><?php echo 'Estado: ', $valor->ProvinciaEstado ?></h5>
+      <p><h6><?php echo 'Casos confirmados: ', $valor->Confirmados ?></h6></p>
+      <p><h6><?php echo 'Óbitos: ', $valor->Mortos ?></h6></p>
+    <?php } ?>
+  </session>
 
 </body>
 </html>
