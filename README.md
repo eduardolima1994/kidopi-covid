@@ -1,5 +1,10 @@
-# App Kidopi Covid-19, acompanhamento de casos
+# App Kidopi Covid-19, Acompanhamento de Casos
 App construído em PHP, Javascript, HTML5 e CSS3. 
+
+## 🧑🏽‍💻 Acesso 
+
+Para acessar o resultado final da aplicação, utilize o seguinte link:
+https://kidopi-covid19.000webhostapp.com
 
 ## 🚀 Começando
 
