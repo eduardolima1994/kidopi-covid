@@ -24,10 +24,10 @@ MySQL
 
 ### 📜 Banco de Dados
 
-Nome do Banco de Dados:
+Nome do Banco de Dados a ser criado:
 
 ```
-phpmyadmin
+kidopicovid
 ```
 Dados para criação da tabela:
 
