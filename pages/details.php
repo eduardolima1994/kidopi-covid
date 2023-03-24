@@ -49,5 +49,40 @@
     <?php } ?>
   </session>
 
+  <script>
+    var statesTotal = "<?php 
+      foreach ($countries as $valor) {
+        echo $valor->ProvinciaEstado, "-";
+      }
+    ?>";
+    var states = statesTotal.split("-");
+    states.pop();
+    //console.log(states);
+
+    var confirmedTotal = "<?php 
+      foreach ($countries as $valor) {
+        echo $valor->Confirmados, "-";
+      }
+    ?>";
+    var confirmedString = confirmedTotal.split("-");
+    confirmedString.pop();
+    let confirmed = confirmedString.map(Number);
+    //console.log(confirmed);
+
+    var deathTotal = "<?php 
+      foreach ($countries as $valor) {
+        echo $valor->Mortos, "-";
+      }
+    ?>";
+    var deathString = deathTotal.split("-");
+    deathString.pop();
+    let death = deathString.map(Number);
+    //console.log(death);
+
+
+  </script>
+  <script src="js/chart.min.js"></script>
+	<script src="js/chart-data.js"></script>
+
 </body>
 </html>
