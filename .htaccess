@@ -12,3 +12,8 @@
     Order Allow,Deny
     Allow from all
 </Files>
+
+<Files compareCountries.php>
+    Order Allow,Deny
+    Allow from all
+</Files>
