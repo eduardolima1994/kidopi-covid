@@ -14,9 +14,9 @@
   // transforma os dados em um array
 
   foreach($dados as $row) {
-    echo "<strong>Último país acessado:  </strong>".$row['country'];
-    echo "<br>";
-    echo "<strong>Data e horário do acesso:  </strong> ".$row['access_datetime'];
+    echo "<p class='credit'><strong>Último país acessado:  </strong>".$row['country']."</p>";
+    $dataHoraFormatada = date('d/m/Y H:i:s', strtotime($row['access_datetime']));
+    echo "<p class='credit'><strong>Data e horário do último acesso:  </strong> ".$dataHoraFormatada."</p>";
   }
 
   mysqli_close($conn);

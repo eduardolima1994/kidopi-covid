@@ -41,6 +41,7 @@
       <p><?php echo 'Quantidade de óbitos: ', number_format($totalDeaths, 0, ',', '.') ?></p>
   </session>
 
+  <!--
   <session>
     <?php foreach ($countries as $valor) { ?>
       <h5><?php echo 'Estado: ', $valor->ProvinciaEstado ?></h5>
@@ -48,6 +49,7 @@
       <p><h6><?php echo 'Óbitos: ', $valor->Mortos ?></h6></p>
     <?php } ?>
   </session>
+  -->
 
   <script>
     var statesTotal = "<?php 

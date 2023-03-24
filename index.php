@@ -36,7 +36,7 @@
 			</div>
 			<div class="column column-30">
 				<div class="user-section"><a href="#">
-					<img src="img/logo.png" alt="profile photo" class="circle float-left profile-photo" width="50" height="auto">
+					<img src="img/logo.gif" alt="profile photo" class="circle float-left profile-photo" width="50" height="auto">
 					<div class="username">
 						<h4>Acompanhamento</h4>
 						<p>Covid-19</p>
@@ -171,12 +171,11 @@
 				</div>
 			</div>
 		
-			<p class="credit">
-				<?php
-					require './db/select.php';
-				?>
-			</p>
+			<?php
+				require './db/select.php';
+			?>
 			<p class="credit">KIDOPI PAINEL COVID-19 by <a href="https://github.com/eduardolima1994">Eduardo Lima</a></p>
+
 		</section>
 	</div>
 	

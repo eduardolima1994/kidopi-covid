@@ -4,9 +4,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../view/css/style.css">
-  <link rel="icon" href="src/img/icon.ico">
+  
   <title>Kidopi - Painel Covid-19</title>
+	
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700" rel="stylesheet">
+	
+	<!-- Template Styles -->
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+	
+	<!-- CSS Reset -->
+	<link rel="stylesheet" href="../css/normalize.css">
+	
+	<!-- Milligram CSS minified -->
+	<link rel="stylesheet" href="../css/milligram.min.css">
+	
+	<!-- Main Styles -->
+	<link rel="stylesheet" href="../css/styles.css">
+
+	<!-- Icon -->
+	<link rel="icon" href="../img/icon.ico">
+
 </head>
 <body>
 
@@ -54,39 +72,50 @@
 
   ?>
 
-  <h1>Países</h1>
+  <h5>COMPARATIVO DE PAÍSES</h5><a class="anchor" name="graphic"></a>
+			<div class="row grid-responsive">
+				<div class="column column-100">
+					<div class="card">
+						<div class="card-block">
+							<div class="canvas-wrapper">
+                  <session>
+                    <h5><?php echo $country1 ?></h5>
+                      <p><?php echo "Quantidade de casos: ", number_format($totalConfirmed1, 0, ',', '.') ?></p>
+                      <p><?php echo "Quantidade de óbitos: ", number_format($totalDead1, 0, ',', '.') ?></p>
+                  </session>
+                  
+                  <session>
+                    <h5><?php echo $country2 ?></h5>
+                      <p><?php echo "Quantidade de casos: ", number_format($totalConfirmed2, 0, ',', '.') ?></p>
+                      <p><?php echo "Quantidade de óbitos: ", number_format($totalDead2, 0, ',', '.') ?></p>
+                  </session>
 
-  <session>
-    <h3><?php echo $country1 ?></h3>
-      <p><?php echo "Quantidade de casos: ", number_format($totalConfirmed1, 0, ',', '.') ?></p>
-      <p><?php echo "Quantidade de óbitos: ", number_format($totalDead1, 0, ',', '.') ?></p>
-  </session>
+                  <h4>Comparativo:</h4>
+
+                  <?php
+                  
+                    if($totalConfirmed1 === 0 || $totalConfirmed2 === 0){
+                      echo "<p>Faltam dados!</p>";
+                    } else {
+                      echo "<h5>", $country1, "</h5>";
+                      echo "<p><b>Taxa de morte: </b>", number_format(($totalDead1 / $totalConfirmed1), 4, ',', '.'), "</p>";
+                      echo "<h5>", $country2, "</h5>";
+                      echo "<p><b>Taxa de morte: </b>", number_format(($totalDead2 / $totalConfirmed2), 4, ',', '.'), "</p>";
+
+                      echo "<h5> Comparativo </h5>";
+                      echo "<p><b>Diferença entre países: </b>", number_format((($totalDead1 / $totalConfirmed1) - ($totalDead2 / $totalConfirmed2)), 4, ',', '.'), "</p>";
+                    }
+
+                  ?>
+
+                  <button onclick="location.href='../'">Voltar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
   
-  <session>
-    <h3><?php echo $country2 ?></h3>
-      <p><?php echo "Quantidade de casos: ", number_format($totalConfirmed2, 0, ',', '.') ?></p>
-      <p><?php echo "Quantidade de óbitos: ", number_format($totalDead2, 0, ',', '.') ?></p>
-  </session>
-
-  <h1>Comparativo:</h1>
-
-  <?php
-  
-    if($totalConfirmed1 === 0 || $totalConfirmed2 === 0){
-      echo "<p>Faltam dados!</p>";
-    } else {
-      echo "<h3>", $country1, "</h3>";
-      echo "<p><b>Taxa de morte: </b>", number_format(($totalDead1 / $totalConfirmed1), 4, ',', '.'), "</p>";
-      echo "<h3>", $country2, "</h3>";
-      echo "<p><b>Taxa de morte: </b>", number_format(($totalDead2 / $totalConfirmed2), 4, ',', '.'), "</p>";
-
-      echo "<h3> Comparativo </h3>";
-      echo "<p><b>Diferença entre países: </b>", number_format((($totalDead1 / $totalConfirmed1) - ($totalDead2 / $totalConfirmed2)), 4, ',', '.'), "</p>";
-    }
-
-  ?>
-
-  <a href="../">Voltar</a>
 
 </body>
 </html>
