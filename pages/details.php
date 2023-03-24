@@ -59,7 +59,6 @@
     ?>";
     var states = statesTotal.split("-");
     states.pop();
-    //console.log(states);
 
     var confirmedTotal = "<?php 
       foreach ($countries as $valor) {
@@ -69,7 +68,6 @@
     var confirmedString = confirmedTotal.split("-");
     confirmedString.pop();
     let confirmed = confirmedString.map(Number);
-    //console.log(confirmed);
 
     var deathTotal = "<?php 
       foreach ($countries as $valor) {
@@ -79,8 +77,6 @@
     var deathString = deathTotal.split("-");
     deathString.pop();
     let death = deathString.map(Number);
-    //console.log(death);
-
 
   </script>
   <script src="js/chart.min.js"></script>

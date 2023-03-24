@@ -6,23 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Kidopi - Painel Covid-19</title>
-	
-	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700" rel="stylesheet">
-	
-	<!-- Template Styles -->
 	<link rel="stylesheet" href="../css/font-awesome.min.css">
-	
-	<!-- CSS Reset -->
 	<link rel="stylesheet" href="../css/normalize.css">
-	
-	<!-- Milligram CSS minified -->
 	<link rel="stylesheet" href="../css/milligram.min.css">
-	
-	<!-- Main Styles -->
 	<link rel="stylesheet" href="../css/styles.css">
-
-	<!-- Icon -->
 	<link rel="icon" href="../img/icon.ico">
 
 </head>
@@ -114,8 +102,5 @@
 					</div>
 				</div>
 			</div>
-
-  
-
 </body>
 </html>

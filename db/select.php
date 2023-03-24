@@ -9,9 +9,8 @@
   }
 
   $query = sprintf("SELECT * FROM access_logs ORDER BY id DESC LIMIT 1,1;");
-  // executa a query
+  
   $dados = mysqli_query($conn, $query);
-  // transforma os dados em um array
 
   foreach($dados as $row) {
     echo "<p class='credit'><strong>Último país acessado:  </strong>".$row['country']."</p>";
