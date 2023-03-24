@@ -3,43 +3,23 @@
 <head>
 	<meta charset="utf-8">
 	<title>Kidopi - Painel Covid-19</title>
-	
-	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700" rel="stylesheet">
-	
-	<!-- Template Styles -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
-	
-	<!-- CSS Reset -->
 	<link rel="stylesheet" href="css/normalize.css">
-	
-	<!-- Milligram CSS minified -->
 	<link rel="stylesheet" href="css/milligram.min.css">
-	
-	<!-- Main Styles -->
 	<link rel="stylesheet" href="css/styles.css">
-
-	<!-- Icon -->
 	<link rel="icon" href="img/icon.ico">
-	
-	<!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
 </head>
-
 <body>
 	<div class="navbar">
 		<div class="row">
-			<div class="column column-30 col-site-title"><a href="#" class="site-title float-left">Kidopi Covid-19</a></div>
-			<div class="column column-40 col-search">
-				<!--<input type="text" name="" value="" placeholder="Search..." />-->
-			</div>
+			<div class="column column-30 col-site-title"><a href="./" class="site-title float-left">Kidopi Covid-19</a></div>
 			<div class="column column-30">
 				<div class="user-section"><a href="#">
-					<img src="img/logo.gif" alt="profile photo" class="circle float-left profile-photo" width="50" height="auto">
+					<a href="./"><img src="img/logo.gif" alt="profile photo" class="circle float-left profile-photo" width="50" height="auto"></a>
 					<div class="username">
-						<h4>Acompanhamento</h4>
-						<p>Covid-19</p>
+						<h4><a href="./">Acompanhamento</a></h4>
+						<p><a href="./">Covid-19</a></p>
 					</div>
 				</a></div>
 			</div>
@@ -51,15 +31,10 @@
 			<ul>
 				<li><a href="#"><em class="fa fa-home"></em> Início</a></li>
 				<li><a href="#country"><em class="fa fa-hand-o-up"></em> Países</a></li>
-				<li><a href="#graphic"><em class="fa fa-bar-chart"></em> Gráfico</a></li>
+				<li><a href="#graphic"><em class="fa fa-bar-chart"></em> Estados</a></li>
 				<li><a href="#compare"><em class="fa fa fa-clone"></em> Comparativo</a></li>
-				<!--	
-				<li><a href="#forms"><em class="fa fa-pencil-square-o"></em> Forms</a></li>
-				<li><a href="#alerts"><em class="fa fa-warning"></em> Alerts</a></li>
-				<li><a href="#buttons"><em class="fa fa-hand-o-up"></em> Buttons</a></li>
-				<li><a href="#tables"><em class="fa fa-table"></em> Tables</a></li>
-				<li><a href="#grid"><em class="fa fa-columns"></em> Grid</a></li>
-				-->
+				<li><a href="#about"><em class="fa fa-pencil-square-o"></em> Sobre</a></li>
+				
 			</ul>
 		</div>
 		<section id="main-content" class="column column-offset-20">
@@ -111,12 +86,12 @@
 			</div>
 
 			<!--Graphic-->
-			<h5>Gráfico</h5><a class="anchor" name="graphic"></a>
+			<h5>Estados</h5><a class="anchor" name="graphic"></a>
 			<div class="row grid-responsive">
 				<div class="column column-100">
 					<div class="card">
 						<div class="card-title">
-							<h2><?php echo $country ?></h2>
+							<h2><?php echo "Estados do país: ".$country ?></h2>
 						</div>
 						<div class="card-block">
 							<div class="canvas-wrapper">
@@ -171,6 +146,7 @@
 				</div>
 			</div>
 		
+			<a class="anchor" name="about"></a>
 			<?php
 				require './db/select.php';
 			?>
@@ -179,43 +155,7 @@
 		</section>
 	</div>
 	
-	<script> function enviarFormulario() { document.getElementById("form-profession").submit(); } </script>
-	
-	<script>
-	window.onload = function () {
-		var chart1 = document.getElementById("line-chart").getContext("2d");
-		window.myLine = new Chart(chart1).Line(lineChartData, {
-		responsive: true,
-		scaleLineColor: "rgba(0,0,0,.2)",
-		scaleGridLineColor: "rgba(0,0,0,.05)",
-		scaleFontColor: "#c5c7cc"
-		});
-		var chart2 = document.getElementById("bar-chart").getContext("2d");
-		window.myBar = new Chart(chart2).Bar(barChartData, {
-		responsive: true,
-		scaleLineColor: "rgba(0,0,0,.2)",
-		scaleGridLineColor: "rgba(0,0,0,.05)",
-		scaleFontColor: "#c5c7cc"
-		});
-		var chart4 = document.getElementById("pie-chart").getContext("2d");
-		window.myPie = new Chart(chart4).Pie(pieData, {
-		responsive: true,
-		segmentShowStroke: false
-		});
-		var chart5 = document.getElementById("radar-chart").getContext("2d");
-		window.myRadarChart = new Chart(chart5).Radar(radarData, {
-		responsive: true,
-		scaleLineColor: "rgba(0,0,0,.05)",
-		angleLineColor: "rgba(0,0,0,.2)"
-		});
-		var chart6 = document.getElementById("polar-area-chart").getContext("2d");
-		window.myPolarAreaChart = new Chart(chart6).PolarArea(polarData, {
-		responsive: true,
-		scaleLineColor: "rgba(0,0,0,.2)",
-		segmentShowStroke: false
-		});
-	};
-	</script>			
+	<script src="js/chart-config.js"></script>
 
 </body>
 </html> 
