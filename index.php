@@ -116,7 +116,7 @@
 				<div class="column column-100">
 					<div class="card">
 						<div class="card-title">
-							<h2>Brazil</h2>
+							<h2><?php echo $country ?></h2>
 						</div>
 						<div class="card-block">
 							<div class="canvas-wrapper">
@@ -181,8 +181,7 @@
 	</div>
 	
 	<script> function enviarFormulario() { document.getElementById("form-profession").submit(); } </script>
-	<script src="js/chart.min.js"></script>
-	<script src="js/chart-data.js"></script>
+	
 	<script>
 	window.onload = function () {
 		var chart1 = document.getElementById("line-chart").getContext("2d");
