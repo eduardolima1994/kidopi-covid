@@ -80,7 +80,7 @@
 
   </script>
   <script src="js/chart.min.js"></script>
-	<script src="js/chart-data.js"></script>
+	<script src="js/chartData.js"></script>
 
 </body>
 </html>

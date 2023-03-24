@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Kidopi - Painel Covid-19</title>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700" rel="stylesheet">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/fontAwesome.min.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/milligram.min.css">
 	<link rel="stylesheet" href="css/styles.css">
@@ -155,7 +155,7 @@
 		</section>
 	</div>
 	
-	<script src="js/chart-config.js"></script>
+	<script src="js/chartConfig.js"></script>
 
 </body>
 </html> 
