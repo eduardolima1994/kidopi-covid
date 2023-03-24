@@ -12,12 +12,31 @@ Essas instruções permitirão que você obtenha uma cópia do projeto em opera�
 
 ### 📋 Pré-requisitos
 
-
 ```
 PHP 8.1.12
 ```
 ```
 Composer version 2.3.10
+```
+```
+MySQL 
+```
+
+### 📜 Banco de Dados
+
+Nome do Banco de Dados:
+
+```
+phpmyadmin
+```
+Dados para criação da tabela:
+
+```
+CREATE TABLE access_logs (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  access_datetime DATETIME,
+  country VARCHAR(255)
+);
 ```
 
 ### 🔧 Instalação
