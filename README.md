@@ -41,7 +41,11 @@ CREATE TABLE access_logs (
 
 ### 🔧 Instalação
 
-Clone o repositório e instale as dependências:
+Clone este repositório e acesse o diretório (kidopi-covid):
+```
+cd kidopi-covid
+```
+Instale as dependências:
 ```
 composer install
 ```
