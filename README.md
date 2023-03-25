@@ -41,7 +41,7 @@ CREATE TABLE access_logs (
 
 ### 🔧 Instalação
 
-Instale as dependências:
+Clone o repositório e instale as dependências:
 ```
 composer install
 ```
